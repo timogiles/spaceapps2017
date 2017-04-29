@@ -1,0 +1,30 @@
+The weather data tells you how much sun is hitting the solar panels. But how is that translated into actual useable energy? This depends on many factors, but the basic equation is:
+
+SOLAR RADIATION (watts/meter^2) * SOLAR PANEL AREA (m^2) * EFFICIENCY
+
+Solar radiation and solar panel area are easily quantifiable, whereas solar panel efficiency depends on many things, including sun angle, cloud type, and the particular solar panels.
+
+I'll use our panels as an example to compute power output at a certain point in time. Our solar panels are 72 square meters in area. On September 1, 2016, at 10:35 AM, our sensor was receiving 1073.71 watts per square meter. Our solar panel efficiency ranges from 8 to 12 percent. So our power output at that time was between
+
+72 m^2 * 1073.71 W/m^2 * .08 = 6,184.5696 W
+
+and
+
+72 m^2 * 1073.71 W/m^2 * .12 = 9,276.8544 W
+
+So suppose you'd like to know whether we would be able to run our electric kettle directly from our solar panel at that time. We've measured that our electric kettle consumes 1400 watts. So in this case, yes, we easily have enough power to run the kettle. 
+
+If you'd like to consider cumulative energy rather than instantaneous power generation, just integrate or sum over time:
+
+
+SOLAR RADIATION (watts/meter^2) * SOLAR PANEL AREA (m^2) * EFFICIENCY * TIME (hours)
+
+In our example, let's assume that the solar radiation remains the same until the next data point at 10:40. So during that 5 minutes, the panels produced between 
+
+72 m^2 * 1073.71 W/m^2 * .08 * 5/60 hours = 515.3808 W * hour
+
+and
+
+72 m^2 * 1073.71 W/m^2 * .12 = 773.0712 W * hour
+
+So given that our kettle consumes 1400 W, that 5 minutes produced enough energy to run our kettle for between 22 and 33 minutes.
