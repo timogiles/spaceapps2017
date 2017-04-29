@@ -1,0 +1,46 @@
+
+def Calculate_Sun(CellphoneStart,CellphoneStop, \
+	MLightingStart, MLightingStop, \
+	ELightingStart, ELightingstop, \
+	CoffeeStart, CoffeeStop, \
+	DryerStart,DryerStop, \
+	WasherSart, WasherStop, \
+	FridgeStart, FridgeStop, \
+	Laptopt1Start, Laptop1Stop, \
+	Laptopt2Start, Laptop2Stop, \
+	Laptopt3Start, Laptop3Stop, \
+	Laptopt4Start, Laptop4Stop, \
+	Laptopt5Start, Laptop5Stop, \
+	Laptopt6Start, Laptop6Stop):
+				
+	print "yay!"
+
+	
+#Calculate_Sun(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+0:00	27.33888889	0
+1:00	24.67777778	0
+2:00	22.01666667	0
+3:00	19.35555556	0
+4:00	16.69444444	0
+5:00	14.03333333	0
+6:00	11.37222222	0
+7:00	10.2219501	1.344172319
+8:00	10.13752783	2.636688849
+9:00	11.24429563	3.827878906
+10:00	13.39515024	4.871965722
+11:00	16.40286476	5.728825629
+12:00	20.04728363	6.365529979
+13:00	24.0837831	6.757610582
+14:00	28.25267199	6.89
+15:00	32.28917146	6.757610582
+16:00	35.93359032	6.365529979
+17:00	38.94130484	5.728825629
+18:00	41.09215945	4.871965722
+19:00	42.19892725	3.827878906
+20:00	41.81450499	2.636688849
+21:00	37.93756619	1.344172319
+22:00	34.71645508	8.44127E-16
+23:00	32.05534397	0
+0:00	29.39423286	0
+
+	output.append([])
