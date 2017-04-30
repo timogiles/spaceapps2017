@@ -111,7 +111,7 @@ def Calculate_Sun(BatteryStart):
     outval = []
     out1 = BatteryStart
     for i in range(len(sun)):
-        out1 += sun[i]
+        out1 += sun[i]*WeatherRating[WeatherIndex]
         if (i >= phone_plugin[1] and i < phone_unplug[1] and phone_plugin[2] == 1):
             out1 -= phone_kwh
         if (i >= light_plugin[1] and i < light_unplug[1] and light_plugin[2] == 1):
@@ -130,7 +130,7 @@ def Calculate_Sun(BatteryStart):
         #check for battery full
         if (out1 > BatteryCapacity):
             out1 = BatteryCapacity
-        outval.append([time[i],sun[i],out1]) 
+        outval.append([time[i],sun[i]*WeatherRating[WeatherIndex],out1]) 
 
     return outval
 	
