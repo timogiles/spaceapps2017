@@ -9,6 +9,7 @@ from scipy.integrate import quad , simps
 from random import randint
 import os
 import ephem
+import time
 
 #pygame initialization-type tasks
 pygame.init()
@@ -207,6 +208,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 print dir_path
 picsfilepath = dir_path + "/Res/"
 
+Splash = pygame.image.load(picsfilepath+"logoSplashscreen.png").convert_alpha()
 BACKGROUND = pygame.image.load(picsfilepath+"backgroundrev1.png").convert_alpha()
 graph = pygame.image.load(picsfilepath+"BlankGraph3a.jpg").convert_alpha()
 coffee_image = pygame.image.load(picsfilepath+"coffee.png").convert_alpha()
@@ -271,8 +273,11 @@ washer_plugin_image = pygame.image.load(picsfilepath+"washer_on.PNG").convert_al
 #check the getting started with rasp pi book for what this means
 #window.blit(helloworld,(50,50))
 #window.blit(att,(500,500))
+
+
 def RedrawScreen():
     window.blit(BACKGROUND,(0,0))
+    #window.blit(Splash,(0,0))
     window.blit(graph,(250,10))
     
     #draw the washer
@@ -344,9 +349,18 @@ def RedrawScreen():
     window.blit(label,(20,60))
     label = myFont.render("Sun Sets at " + Sunrise_set[1],1,(255,255,255))
     window.blit(label,(20,80))
+    pygame.display.update()
 
+##make a splash screen!##
+window.blit(Splash,(0,0))
+pygame.display.update()
+time1 = pygame.time.get_ticks()
+while pygame.time.get_ticks() < (time1+3000):
+    x=1
+print "time = " + str(pygame.time.get_ticks())
 
-RedrawScreen()        
+	
+RedrawScreen() 
 
 #################
 ### MAIN LOOP ###
